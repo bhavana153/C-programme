@@ -1,0 +1,12 @@
+include<stdio.h>
+int main()
+{
+    int a;
+    printf("Enter any number:|n");
+    scanf("%d",&a);
+    if((a%3)==0)
+    printf("enters number is divisible by 3");
+    else if((a%5)==0)
+    printf("enteres numbers divisible by 5");
+    return 0;
+    
