@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define PI 3.14159
+PI 3.14159
 double calculateArea(double radius) {
     return PI * radius * radius;
 }
