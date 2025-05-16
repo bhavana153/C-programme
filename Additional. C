@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+
+struct Complex {
+    float real;
+    float imag;
+};
+
+struct Complex add(struct Complex a, struct Complex b) {
+    struct Complex result;
+    result.real = a.real + b.real;
+    result.imag = a.imag + b.imag;
+    return result;
+}
+
+struct Complex subtract(struct Complex a, struct Complex b) {
+    struct Complex result;
+    result.real = a.real - b.real;
+    result.imag = a.imag - b.imag;
+    return result;
+}
+
+void display(struct Complex c) {
+    if (c.imag >= 0)
+        printf("%.2f + %.2fi\n", c.real, c.imag);
+    else
+        printf("%.2f - %.2fi\n", c.real, -c.imag);
+}
+
+int main() {
+    struct Complex num1, num2, sum, diff;
+
+    
+    printf("Enter real and imaginary part of first complex number: ");
+    scanf("%f %f", &num1.real, &num1.imag);
+
+    printf("Enter real and imaginary part of second complex number: ");
+    scanf("%f %f", &num2.real, &num2.imag);
+
+   
+    sum = add(num1, num2);
+    diff = subtract(num1, num2);
+
+   
+    printf("\nSum: ");
+    display(sum);
+
+    printf("Difference: ");
+    display(diff);
+
+    return 0;
+}
